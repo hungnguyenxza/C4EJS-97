@@ -74,7 +74,49 @@ for (let i = 0; i < listPhones.length; i++) {
     console.log(`${i + 1}`);
     for (const key in phone) {
         let value = phone[key];
-        console.log(`${key}: ${value}`);   
+        console.log(`${key}: ${value}`);
     }
     console.log('==========');
+}
+
+//2.
+let newPhone = {};
+newPhone.name = prompt("Nhập tên:");
+newPhone.price = Number(prompt("Nhập giá:"));
+newPhone.brand = prompt("Nhập hãng:");
+listPhones.push(newPhone);
+// 1. In
+for (let i = 0; i < listPhones.length; i++) {
+    const phone = listPhones[i];
+    console.log(`${i + 1}`);
+    for (const key in phone) {
+        let value = phone[key];
+        console.log(`${key}: ${value}`);
+    }
+    console.log('==========');
+}
+
+// 3. 
+let searchPrice = Number(prompt("Nhập giá"));
+let searchResult = [];
+for (let i = 0; i < listPhones.length; i++) {
+    const phone = listPhones[i];
+    if (phone.price > searchPrice) {
+        searchResult.push(phone);
+    }
+}
+// 1. In
+if (searchResult.length > 0) {
+    console.log(`Có ${searchResult.length} đt thỏa mãn:`);
+    for (let i = 0; i < searchResult.length; i++) {
+        const phone = searchResult[i];
+        console.log(`${i + 1}`);
+        for (const key in phone) {
+            let value = phone[key];
+            console.log(`${key}: ${value}`);
+        }
+        console.log('==========');
+    }
+} else {
+    console.log('Không có đt thỏa mãn');
 }
