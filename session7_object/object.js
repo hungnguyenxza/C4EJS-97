@@ -69,15 +69,7 @@ let listPhones = [
 ];
 
 // 1. In
-for (let i = 0; i < listPhones.length; i++) {
-    const phone = listPhones[i];
-    console.log(`${i + 1}`);
-    for (const key in phone) {
-        let value = phone[key];
-        console.log(`${key}: ${value}`);
-    }
-    console.log('==========');
-}
+print(listPhones);
 
 //2.
 let newPhone = {};
@@ -86,15 +78,7 @@ newPhone.price = Number(prompt("Nhập giá:"));
 newPhone.brand = prompt("Nhập hãng:");
 listPhones.push(newPhone);
 // 1. In
-for (let i = 0; i < listPhones.length; i++) {
-    const phone = listPhones[i];
-    console.log(`${i + 1}`);
-    for (const key in phone) {
-        let value = phone[key];
-        console.log(`${key}: ${value}`);
-    }
-    console.log('==========');
-}
+print(listPhones);
 
 // 3. 
 let searchPrice = Number(prompt("Nhập giá"));
@@ -108,8 +92,33 @@ for (let i = 0; i < listPhones.length; i++) {
 // 1. In
 if (searchResult.length > 0) {
     console.log(`Có ${searchResult.length} đt thỏa mãn:`);
-    for (let i = 0; i < searchResult.length; i++) {
-        const phone = searchResult[i];
+    print(searchResult);
+} else {
+    console.log('Không có đt thỏa mãn');
+}
+
+//4.
+let searchName = Number(prompt("Nhập tên"));
+searchResult = [];
+for (let i = 0; i < listPhones.length; i++) {
+    const phone = listPhones[i];
+    if (phone.name.toLowerCase().includes(searchName.toLowerCase())) {
+        searchResult.push(phone);
+    }
+}
+// 1. In
+if (searchResult.length > 0) {
+    console.log(`Có ${searchResult.length} đt thỏa mãn:`);
+    print(searchResult);
+} else {
+    console.log('Không có đt thỏa mãn');
+}
+
+//
+
+function print(list){
+    for (let i = 0; i < list.length; i++) {
+        const phone = list[i];
         console.log(`${i + 1}`);
         for (const key in phone) {
             let value = phone[key];
@@ -117,6 +126,4 @@ if (searchResult.length > 0) {
         }
         console.log('==========');
     }
-} else {
-    console.log('Không có đt thỏa mãn');
 }
