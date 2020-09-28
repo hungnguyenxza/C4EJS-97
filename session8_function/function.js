@@ -113,10 +113,27 @@ function giaiThua(N) {
 //console.log(giaiThua(6));
 
 // Tìm số thứ N của Fibonacci: 1,1,2,3,5,...
-function fibonacci(n){
-    if(n === 1 || n === 2){
+function fibonacci(n) {
+    if (n === 1 || n === 2) {
         return 1;
     }
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
+// Array iterator
+
+let A = [5, 7, 8, 9, 10, 2, 3];
+
+let x1 = A.find(soNT);
+
+function soLe(v){
+    return v % 2 === 1;
+}
+function soNT(v){
+    return true;
+}
+//console.log(x1);
+let x2 = A.find(function (v){
+    return v > 10;
+});
+console.log(x1);
