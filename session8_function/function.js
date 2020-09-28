@@ -27,7 +27,7 @@ function sum(N) {
     }
     return s;
 }
-let n = Number(prompt("Nhập 1 số"));
+// let n = Number(prompt("Nhập 1 số"));
 //sum(n);
 function timSoNT(N) {
     let result = [];
@@ -65,7 +65,7 @@ function sumOfArray(arr) {
     }
     return s;
 }
-sumOfArray([1, 2, 3, 4, 5, 6]);
+//sumOfArray([1, 2, 3, 4, 5, 6]);
 
 //8
 function lonHonN(arr, N) {
@@ -99,4 +99,24 @@ function hop(arr1, arr2) {
 }
 
 
-console.log(hop([1, 2, 3,], [2, 1, 5, 5, 6, 3, 2, 1]));
+// console.log(hop([1, 2, 3,], [2, 1, 5, 5, 6, 3, 2, 1]));
+
+// Tính N!
+
+function giaiThua(N) {
+    if (N === 0 || N === 1) {
+        return 1;
+    }
+
+    return N * giaiThua(N - 1);
+}
+//console.log(giaiThua(6));
+
+// Tìm số thứ N của Fibonacci: 1,1,2,3,5,...
+function fibonacci(n){
+    if(n === 1 || n === 2){
+        return 1;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
