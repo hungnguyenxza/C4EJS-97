@@ -18,7 +18,13 @@
 
 let http = new XMLHttpRequest();
 http.onreadystatechange = function () {
-    console.log(this);
+    if (this.readyState === 4
+        && this.status === 200) {
+        let data = JSON.parse(this.responseText);
+        console.log(`Now: ${data.date}`);
+        console.log(`Temp: ${data.temperature} ${data.unit}`);
+        console.log(`Humidity: ${data.humidity}`);
+    }
 }
 http.open('GET', 'https://weather-data-demo.herokuapp.com/get-weather-today');
 
