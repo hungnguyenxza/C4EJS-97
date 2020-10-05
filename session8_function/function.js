@@ -126,14 +126,14 @@ let A = [5, 7, 8, 9, 10, 2, 3];
 
 let x1 = A.find(soNT);
 
-function soLe(v){
+function soLe(v) {
     return v % 2 === 1;
 }
-function soNT(v){
+function soNT(v) {
     return true;
 }
 //console.log(x1);
-let x2 = A.find(function (v){
+let x2 = A.find(function (v) {
     return v > 10;
 });
 console.log(x1);
