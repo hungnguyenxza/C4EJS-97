@@ -1,0 +1,59 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.my-profile{
+    width: 600px;
+    border: 5px solid #bab5b5;
+    margin: auto;
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.my-avatar img{
+    border-radius: 50%;
+    width: 250px;
+    height: 300px;
+}
+.my-info{
+    margin-bottom: 15px;
+}
+.my-info .my-name{
+    font-size: 50px;
+    color: #598ab2;
+}
+.my-info .my-link a{
+    font-size: 20px;
+    color: gray;
+}
+.my-info .my-position{
+    font-size: 25px;
+    color: gray;
+}
+.my-info .my-company{
+    font-size: 28px;
+    color: gray;
+}
+.my-skill{
+    display: flex;
+}
+.my-skill .skill-item{
+    flex: 1;
+    color: white;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.my-skill .skill-html{
+    background-color: red;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.my-skill .skill-js{
+    background-color: yellow;
+}
+.my-skill .skill-css{
+    background-color: turquoise;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

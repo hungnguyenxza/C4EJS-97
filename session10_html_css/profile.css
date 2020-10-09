@@ -1,0 +1,78 @@
+body{
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+.my-profile{
+    width: 550px;
+    margin: auto;
+    border-radius: 15px;
+    border: 6px solid #c7c7c7;
+    padding: 15px;
+    background-color: #f7f7f7;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.my-avatar{
+    text-align: center;
+    padding: 10px;
+}
+.my-avatar .avatar-img{
+    width: 220px;
+    height: 250px;
+    border-radius: 50%;
+}
+.my-info{
+    margin-bottom: 20px;
+}
+.group-info{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.my-info .my-name{
+    font-size: 55px;
+    color: #598ab2;
+}
+.my-info .my-position{
+    font-size: 25px;
+    color:#8d8f8e;
+
+}
+.my-info .my-connect a{
+    font-size: 19px;
+    color:#8d8f8e;
+    text-decoration: underline;
+}
+.my-info .my-company{
+    font-size: 25px;
+    color:#6d6e6e;
+}
+.my-skill{
+    display: flex;
+    text-align: center;
+}
+.my-skill .skill-info{
+    flex: 1;
+    font-size: 22px;
+    padding: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.my-skill .skill-info:first-child{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.my-skill .skill-info:last-child{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.skill-html{
+    background-color: #df4a17;
+    color: #f7f7f7;
+}
+.skill-js{
+    background-color: #e9ca32;
+    color: #f7f7f7;
+}
+.skill-css{
+    background-color: #006eba;
+    color: #f7f7f7;
+}
