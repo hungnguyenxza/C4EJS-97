@@ -33,4 +33,27 @@
 //     }
 // }
 
+let listPhones = [];
+function addPhone() {
+    let phoneNameDom = document.getElementById('txtPhoneName');
+    let phoneName = phoneNameDom.value;
+    phoneNameDom.value = '';
 
+    listPhones.push(phoneName);
+    displayListPhones();
+}
+
+function displayListPhones() {
+    let listPhonesDom = document.getElementById('list-phones');
+    listPhonesDom.innerHTML = '';
+    for (let i = 0; i < listPhones.length; i++) {
+        const phoneName = listPhones[i];
+        listPhonesDom.innerHTML += `<li>${phoneName}</li>`;
+    }
+}
+
+function enterAddPhone(e) {
+    if (e.key === 'Enter') {
+        addPhone();
+    }
+}
