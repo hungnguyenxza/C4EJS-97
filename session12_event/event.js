@@ -35,21 +35,35 @@
 
 let listPhones = [];
 function addPhone() {
+
     let phoneNameDom = document.getElementById('txtPhoneName');
-    let phoneName = phoneNameDom.value;
+    let phoneName = phoneNameDom.value.trim();
+    if (phoneName === '') {
+        alert("Nhập tên điện thoại");
+        return;
+    }
     phoneNameDom.value = '';
 
     listPhones.push(phoneName);
-    displayListPhones();
+    displayListPhones(listPhones);
 }
 
-function displayListPhones() {
+function displayListPhones(phones) {
     let listPhonesDom = document.getElementById('list-phones');
     listPhonesDom.innerHTML = '';
-    for (let i = 0; i < listPhones.length; i++) {
-        const phoneName = listPhones[i];
+    for (let i = 0; i < phones.length; i++) {
+        const phoneName = phones[i];
         listPhonesDom.innerHTML += `<li>${phoneName}</li>`;
     }
+}
+
+function searchPhone(){
+    let txtSearchDom = document.getElementById('txtSearch');
+    let search = txtSearchDom.value;
+    let result = listPhones.filter(function(v){
+        return v.toLowerCase().includes(search.toLowerCase());
+    });
+    displayListPhones(result);
 }
 
 function enterAddPhone(e) {
