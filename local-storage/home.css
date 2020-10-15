@@ -1,0 +1,12 @@
+.card img:hover{
+    transform: scale(1.1);
+    transition: all ease 300ms;
+}
+.card img{
+    height: 270px;
+    width: 220px;
+}
+
+.cursor-p{
+    cursor: pointer;
+}

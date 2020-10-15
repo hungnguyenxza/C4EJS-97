@@ -1,0 +1,15 @@
+#relative .img-fluid{
+    width: 200px;
+    height: 250px;
+}
+#relative .img-fluid:hover{
+    transform: scale(1.1);
+    transition: all ease 300ms;
+}
+.phone-relative{
+    cursor: pointer;
+}
+#phone-detail img{
+    height: 350px;
+    width: 270px;
+}
